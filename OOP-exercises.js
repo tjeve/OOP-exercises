@@ -79,21 +79,21 @@ myHand.addCard(card2)
 myHand.addCard(yourCard)
 
 // console.log(myHand.hand[1].point)
-console.log(myHand.getPoints())
+// console.log(myHand.getPoints())
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 // ~~~~~~~~~~~~~~~~ Deck Constructor ~~~~~~~~~~~~~~~~
 
 class Deck {
     constructor () {
-        let deck = []
+        let deck = this.deck = []
 
         const suits = ['spades', 'hearts', 'clubs', 'diamonds']
         const points = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
-        for (let idx = 0; idx < suits.length; idx++) {
+        for (var idx = 0; idx < suits.length; idx++) {
 
-            for (let idx2 = 0; idx2 < points.length; idx2++) {
+            for (var idx2 = 0; idx2 < points.length; idx2++) {
 
                 let card = {
                     point: points[idx2],
@@ -101,16 +101,21 @@ class Deck {
                 }
                 deck.push(card)
             }
-
-            return deck
         }
-        // draw() {}
-        // shuffle() {}
-        // numCardsLeft () {}
-
     }
+    draw() {
+        let randomNumberBetween1and52 = (Number((Math.random()* 52).toFixed(0)))
+        return this.deck[randomNumberBetween1and52]
+    }
+    // shuffle() {
+    //     //function can iterate through an array, grabbing random, unique indices
+    //     //and sending them to a new array until there is an array the same length
+    //     //there are definitely methods for this already.
+    // }
+    // numCardsLeft () {}
 }
 
-let theDeck = new Deck
+let myDeck = new Deck 
 
-console.log(theDeck)
+// console.log(randomNumberBetween1and52)
+console.log(myDeck.draw())
