@@ -119,3 +119,15 @@ let myDeck = new Deck
 
 // console.log(randomNumberBetween1and52)
 console.log(myDeck.draw())
+
+
+
+
+
+
+
+
+
+
+
+// This is useful: https://wsvincent.com/javascript-object-oriented-deck-cards/
