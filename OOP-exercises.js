@@ -45,7 +45,8 @@ class Card {
 }
 let myCard = new Card (5, 'diamonds')
 let yourCard = new Card (13, 'spades')
-
+let card1 = new Card (8, 'clubs')
+let card2 = new Card (12, 'hearts')
 // myCard.getImageURL()
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
@@ -60,9 +61,9 @@ class Hand {
     }
     getPoints() {
         // Maps through the array of objects (cards in Hand) and returns just the point properties to a new array
-        let arrayOfAllPointsInHand = this.hand.map(x => x.point)
+        let arrayOfPointsInHand = this.hand.map(card => card.point)
         // The reduce method turns an array into a single value
-        let pointsInHand = arrayOfAllPointsInHand.reduce((accumulator, currentValue) => accumulator + currentValue)
+        let pointsInHand = arrayOfPointsInHand.reduce((accumulator, currentValue,) => accumulator + currentValue)
 
         return pointsInHand
     }
@@ -71,6 +72,8 @@ class Hand {
 let myHand = new Hand()
 
 myHand.addCard(myCard)
+myHand.addCard(card1)
+myHand.addCard(card2)
 
 // console.log(myHand)
 myHand.addCard(yourCard)
@@ -80,3 +83,29 @@ console.log(myHand.getPoints())
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 // ~~~~~~~~~~~~~~~~ Deck Constructor ~~~~~~~~~~~~~~~~
+
+class Deck {
+    constructor () {
+        let deck = []
+
+        const suits = ['spades', 'hearts', 'clubs', 'diamonds']
+        const points = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+        for (let idx = 0; idx < suits.length; idx++) {
+            for (let idx2 = 0; idx2 < points.length; idx2++) {
+                let card = {
+                    point: points[idx2],
+                    suit: suits[idx]
+                }
+                deck.push(card)
+            }
+            return deck
+        }
+
+        // let card = suits.map(suit => {})
+    }
+}
+
+let theDeck = new Deck
+
+console.log(theDeck)
