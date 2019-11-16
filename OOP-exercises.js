@@ -94,17 +94,20 @@ class Deck {
         for (let idx = 0; idx < suits.length; idx++) {
 
             for (let idx2 = 0; idx2 < points.length; idx2++) {
+
                 let card = {
                     point: points[idx2],
                     suit: suits[idx]
                 }
                 deck.push(card)
             }
-            deck.push()
+
             return deck
         }
+        // draw() {}
+        // shuffle() {}
+        // numCardsLeft () {}
 
-        let card = suits.map(suit => {})
     }
 }
 
