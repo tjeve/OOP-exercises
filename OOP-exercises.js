@@ -92,6 +92,7 @@ class Deck {
         const points = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
         for (let idx = 0; idx < suits.length; idx++) {
+
             for (let idx2 = 0; idx2 < points.length; idx2++) {
                 let card = {
                     point: points[idx2],
@@ -99,10 +100,11 @@ class Deck {
                 }
                 deck.push(card)
             }
+            deck.push()
             return deck
         }
 
-        // let card = suits.map(suit => {})
+        let card = suits.map(suit => {})
     }
 }
 
