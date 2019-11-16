@@ -15,6 +15,14 @@ let Jordon = new Person("Jordon", "jordon@aol.com", '495-586-3456')
 
 Sonny.greet(Jordon)
 
-let contactInfo = (name) => { return "This is the email address of" + name.name}
+let printContactInfo = (Person) => {
+    return console.log("My name is " + Person.name + " and my phone number and email are: " + Person.phone + " and " + Person.email)
+}
 
-contactInfo(Jordon)
+let SonnyContactInfo = () => printContactInfo(Sonny)
+
+let JordonContactInfo = () => printContactInfo(Jordon)
+
+SonnyContactInfo()
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
