@@ -107,6 +107,15 @@ class Deck {
         let randomNumberBetween1and52 = (Number((Math.random()* 52).toFixed(0)))
         return this.deck[randomNumberBetween1and52]
     }
+    shuffle() {
+      let startingDeck = this.deck
+      
+      for (let idx = startingDeck.length; idx >= 0; idx--) {
+          startingDeck.push(Math.floor(Math.random() * startingDeck.length))
+        // startingDeck.splice(Math.floor(Math.random() * startingDeck.length), 1)
+        console.log()
+      }
+    }
     // shuffle() {
     //     //function can iterate through an array, grabbing random, unique indices
     //     //and sending them to a new array until there is an array the same length
@@ -118,7 +127,7 @@ class Deck {
 let myDeck = new Deck 
 
 // console.log(randomNumberBetween1and52)
-console.log(myDeck.draw())
+console.log(myDeck.shuffle())
 
 
 
