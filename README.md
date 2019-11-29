@@ -76,5 +76,5 @@ Card {point: 1, suit: "spades"}
 50
 ```
 
-Implement a Deck class that will allow for the above code to work.
+Implement a Deck class that will allow for the code above to work.
 
