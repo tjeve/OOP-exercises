@@ -1,4 +1,7 @@
 # JavaScript Objects and Constructors
+
+this repo is for the use of demonstrating how Objects and Constructors are used in javascript
+
 ## Person
 Given this code:
 
